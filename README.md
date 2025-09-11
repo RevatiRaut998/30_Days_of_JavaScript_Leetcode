@@ -26,23 +26,47 @@ Closures/
 
 ## ✅ Topics Covered
 
-- **Closures & Scope**  
-  Create Hello World Function, Counter, To Be Or Not To Be, Counter II
+### 🔒 **Closures**
+1. Create Hello World Function – ✅  
+2. Counter ✅  
+3. To Be Or Not To Be ✅  
+4. Counter II ✅  
 
-- **Array Transformations**  
-  Apply Transform Over Each Element in Array, Filter, Reduce, Group By, Sort By, Chunk Array, Flatten Deeply Nested Array
+### 📦 **Basic Array Transformations**
+5. Apply Transform Over Each Element in Array  
+6. Filter Elements from Array  
+7. Array Reduce Transformation  
 
-- **Function Utilities**  
-  Function Composition, Memoize, Allow One Function Call, Debounce
+### ⚙️ **Function Transformations**
+8. Function Composition  
+9. Return Length of Arguments Passed  
+10. Allow One Function Call ✅  
+11. Memoize – *Medium*  
 
-- **Asynchronous Programming**  
-  Add Two Promises, Sleep, Timeout/Interval Cancellation, Promise Time Limit, Cache with Time Limit, Execute Async Functions in Parallel
+### ⏱️ **Promises and Time**
+12. Add Two Promises  
+13. Sleep  
+14. Timeout Cancellation  
+15. Interval Cancellation  
+16. Promise Time Limit – *Medium*  
+17. Cache With Time Limit – *Medium*  
+18. Debounce – *Medium*  
+19. Execute Asynchronous Functions in Parallel – *Medium*  
 
-- **Objects & JSON**  
-  Is Object Empty, Compact Object, Join Two Arrays by ID, Array Prototype Last
+### 🗂️ **JSON**
+20. Is Object Empty  
+21. Chunk Array  
+22. Array Prototype Last  
+23. Group By – *Medium*  
+24. Sort By  
+25. Join Two Arrays by ID – *Medium*  
+26. Flatten Deeply Nested Array – *Medium*  
+27. Compact Object – *Medium*  
 
-- **Classes & Patterns**  
-  Event Emitter, Array Wrapper, Calculator with Method Chaining
+### 🏛️ **Classes**
+28. Event Emitter – *Medium*  
+29. Array Wrapper  
+30. Calculator with Method Chaining  
 
 ---
 
