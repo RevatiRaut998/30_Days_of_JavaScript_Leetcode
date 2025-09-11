@@ -1,0 +1,37 @@
+/*Functional programming concept : Passing function as a parameter
+- Calculate area, circumference and diameter of a circle
+- area is callback function
+- calculate is higher order function
+- Example of modularity and reusability of code
+- Functional programming is a programming paradigm where you build software by 
+composing pure functions, avoiding shared state, mutable data, and side-effects.
+- In functional programming, functions are first-class citizens, meaning 
+they can be assigned to variables, passed as arguments to other functions, 
+and returned from other functions.
+*/
+
+
+const radius = [3,4,5,6];
+
+const area = function(radius){
+return Math.PI*radius*radius
+};
+const circumference = function(radius){
+return 2*Math.PI*radius;
+};
+const diameter=function(radius){
+return 2*radius;
+};
+
+const calculate = function(radius, logic){
+    const output=[];
+    for(i=0;i<radius.length;i++){
+     output.push(logic(radius[i]));
+    }
+    return output;
+}
+
+console.log(calculate(radius,area));
+console.log(calculate(radius,circumference));
+console.log(calculate(radius,diameter));
+
