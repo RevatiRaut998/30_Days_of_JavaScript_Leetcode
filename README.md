@@ -68,6 +68,12 @@ Closures/
 29. Array Wrapper  
 30. Calculator with Method Chaining  
 
+### 💻 **Practice JS**
+This folder contains JavaScript code snippets and examples covering important core topics
+- Code samples for key JavaScript functions and patterns
+- Explanatory comments for better understanding
+- Practical examples to illustrate each concept
+
 ---
 
 ## 🎯 Why This Repo?
