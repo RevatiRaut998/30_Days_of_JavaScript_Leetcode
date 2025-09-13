@@ -41,7 +41,7 @@ Closures/
 8. Function Composition ✅
 9. Return Length of Arguments Passed ✅  
 10. Allow One Function Call ✅  
-11. Memoize – *Medium*  
+11. Memoize – *Medium* ✅
 
 ### ⏱️ **Promises and Time**
 12. Add Two Promises  
