@@ -39,7 +39,7 @@ Closures/
 
 ### ⚙️ **Function Transformations**
 8. Function Composition ✅
-9. Return Length of Arguments Passed  
+9. Return Length of Arguments Passed ✅  
 10. Allow One Function Call ✅  
 11. Memoize – *Medium*  
 
