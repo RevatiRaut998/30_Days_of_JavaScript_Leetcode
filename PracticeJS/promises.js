@@ -142,17 +142,7 @@ createOrder(cart)
 //To make it better, we use Async Await
 
 /*------------------------------------------------------------------------------------------------------------------------------*/
-//Async Await in JavaScript
-//Async Await is a syntactic sugar over promises
-//It makes the code look synchronous, but it is asynchronous under the hood
-//It is easier to read and write
-//It is built on top of promises
-//It is available in ES8
-//To use async await, we need to use async keyword before the function to wait for the promise to be fulfilled
-//We need to use await keyword before the promise object
-//The function with async keyword returns a promise object
-//The await keyword can only be used inside the async function
-//We can use try catch block to handle errors
+
 
 
 
