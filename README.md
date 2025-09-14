@@ -45,7 +45,7 @@ Closures/
 
 ### ⏱️ **Promises and Time**
 12. Add Two Promises ✅
-13. Sleep  
+13. Sleep ✅
 14. Timeout Cancellation  
 15. Interval Cancellation  
 16. Promise Time Limit – *Medium*  
