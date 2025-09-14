@@ -44,7 +44,7 @@ Closures/
 11. Memoize – *Medium* ✅
 
 ### ⏱️ **Promises and Time**
-12. Add Two Promises  
+12. Add Two Promises ✅
 13. Sleep  
 14. Timeout Cancellation  
 15. Interval Cancellation  
