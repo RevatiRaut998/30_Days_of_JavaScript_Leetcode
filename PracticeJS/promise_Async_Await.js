@@ -156,7 +156,7 @@ fetchPromise();
 
 //Error Handling
 
-//We have a try ctach for error handling
+//We have a try catch for error handling
 //Example :
 
 const urlUser = "https://api.githb.com/users/RevatiRaut998";
