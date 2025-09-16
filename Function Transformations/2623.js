@@ -7,27 +7,71 @@ A memoized function is a function that will never be called twice with the same 
 
 You can assume there are 3 possible input functions: sum, fib, and factorial.
 
-sum accepts two integers a and b and returns a + b. Assume that if a value has already been cached for the arguments (b, a) where a != b, it cannot be used for the arguments (a, b). For example, if the arguments are (3, 2) and (2, 3), two separate calls should be made.
+sum accepts two integers a and b and returns a + b. 
+Assume that if a value has already been cached for the arguments (b, a) where a != b, 
+it cannot be used for the arguments (a, b). 
+For example, if the arguments are (3, 2) and (2, 3), two separate calls should be made.
 fib accepts a single integer n and returns 1 if n <= 1 or fib(n - 1) + fib(n - 2) otherwise.
 factorial accepts a single integer n and returns 1 if n <= 1 or factorial(n - 1) * n otherwise.
  */
 
-var memoize = function(fn) {
-    const cache = new Map();
+function memoize(func1) {
+  const cache = {};
+  return function (...args) {
+    let n = JSON.stringify(args); // Simple key generation
+    if (n in cache) {
+      return cache[n];
+    } else {
+      let result = func1.apply(this, args);
+      cache[n] = result;
+      return result;
+    }
+  };
+}
 
-    return function(...args) {
-         const key = JSON.stringify(args);
+// For Square of a number
+function square(n) {
+  return n * n;
+}
 
-        // Check if result is cached
-        if (cache.has(key)) {
-            return cache.get(key);
-        }
+function memoizeSquare(func) {
+  let cache = {};
+  return function (...args) {
+    let n = args[0]; //Because our input is single parameter n
+    if (n in cache) {
+      return cache[n];
+    } else {
+      let result = func(n);
+      cache[n] = result;
+      return result;
+    }
+  };
+}
+console.time;
+let effResult = memoize(square);
+console.timeEnd();
 
-        // Compute result and store it
-        const result = fn(...args);
-        cache.set(key, result);
-        return result;
-    };
+console.time;
+console.log(effResult(5));
+console.timeEnd();
+/*******************************************************************************************************************************************************************************************************************************************/
+
+var memoize = function (fn) {
+  const cache = new Map();
+
+  return function (...args) {
+    const key = JSON.stringify(args);
+
+    // Check if result is cached
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+
+    // Compute result and store it
+    const result = fn(...args);
+    cache.set(key, result);
+    return result;
+  };
 };
 
 /**
@@ -62,7 +106,6 @@ var memoize = function(fn) {
  * memoFib(10); // Computes recursively but caches intermediate results
  * memoFib(10); // Returns cached result instantly
  */
-
 
 //Time Complexity: O(n) for fib and factorial due to caching, O(1) for sum
 //Space Complexity: O(n) for storing cached results
