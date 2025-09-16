@@ -48,7 +48,7 @@ Closures/
 13. Sleep ✅
 14. Timeout Cancellation ✅
 15. Interval Cancellation ✅
-16. Promise Time Limit – *Medium*  
+16. Promise Time Limit – *Medium* ✅
 17. Cache With Time Limit – *Medium*  
 18. Debounce – *Medium*  
 19. Execute Asynchronous Functions in Parallel – *Medium*  
