@@ -62,3 +62,28 @@ console.log(greaterThanFive);
 //const greaterThanFive = numbers.filter((x) => x>5);
 
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+//Simple Examples :
+
+//Return even values from array
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let newArr = arr.filter((val) => {
+  return val % 2 === 0; //even value
+});
+console.log(newArr); //Output : [2, 4, 6, 8, 10]
+
+//Get age>12 from array
+let student = [
+  { name: "Jay", age: 10 },
+  { name: "Sam", age: 15 },
+  { name: "Dave", age: 18 },
+];
+
+let nameArr = student.filter((val) => {
+  return val.age > 12;
+});
+
+console.log(nameArr); // Output : 0 : {name: 'Sam', age: 15}
+//                                1 : {name: 'Dave', age: 18}

@@ -62,3 +62,27 @@ Array.prototype.calculate = function(logic){
 console.log(radius.calculate(area));
 console.log(radius.calculate(circumference));
 console.log(radius.calculate(diameter));
+
+/***********************************************************************************************************/
+
+
+//For each method in JS - can only be used for arrays  not strings - Hihgher order method
+let arr = [1, 2, 3, 4, 5];
+
+arr.forEach(function printVal(val) {
+  console.log(val);
+});
+
+//Same in Array function because we use array function for for each
+
+let arr1 = [6, 7, 8, 9, 10];
+arr1.forEach((val) => {
+  console.log(val);
+});
+
+//Actual syntax of for each callback has params of - value, index and array
+//Example:
+let arr2 = ["pune","delhi","mumbai"];
+arr2.forEach((val, index,arr2) => {
+  console.log(val.toUpperCase(),index,arr2);
+});

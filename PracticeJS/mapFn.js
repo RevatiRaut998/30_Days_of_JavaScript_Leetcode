@@ -62,3 +62,24 @@ console.log(binaryArr);
 //output: ['101', '1', '11', '110', '1001']
 
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+//Simple examples:
+let num = [1, 2, 3, 4, 5, 6];
+
+num.map((val) => {
+  console.log(val);
+});
+
+
+//To get map to return the array itself
+
+let newArray = num.map((val) => {
+  return val;
+});
+console.log(newArray);
+
+// To get square array as output
+let squareArr = num.map((val) => {
+  return val*val;
+});
+console.log(squareArr);
