@@ -55,7 +55,7 @@ Closures/
 
 ### 🗂️ **JSON**
 20. Is Object Empty ✅
-21. Chunk Array  
+21. Chunk Array ✅
 22. Array Prototype Last  
 23. Group By – *Medium*  
 24. Sort By  
