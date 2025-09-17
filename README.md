@@ -7,17 +7,17 @@ The goal of this plan is to strengthen JavaScript fundamentals including closure
 
 ## 📂 Structure
 
-The repository is organized by **topic folders**, each containing solution files named according to their **LeetCode problem number**.  
+The repository is organized by **topic folders**, each containing solution files named according to their **LeetCode problem title**.  
 This makes it easy to locate a solution either by topic or by the original LeetCode problem.
 
 Example folder layout:
 
 ```
 Closures/
-├─ 2667.js      // Create Hello World Function
-├─ 2620.js      // Counter
-├─ 2704.js      // To Be Or Not To Be
-├─ 2665.js      // Counter II
+├─ 2667_create_hello_world_function.js      // Create Hello World Function
+├─ 2620_counter.js                          // Counter
+├─ 2704_to_be_or_not_to_be.js               // To Be Or Not To Be
+├─ 2665_counter_II.js                       // Counter II
 ... and other problem files organized similarly by topic and number.
 ```
 > Each file contains a complete, self-contained solution to the corresponding LeetCode problem.  
@@ -54,7 +54,7 @@ Closures/
 19. Execute Asynchronous Functions in Parallel – *Medium*  
 
 ### 🗂️ **JSON**
-20. Is Object Empty  
+20. Is Object Empty ✅
 21. Chunk Array  
 22. Array Prototype Last  
 23. Group By – *Medium*  
