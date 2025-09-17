@@ -93,7 +93,7 @@ git clone https://github.com/RevatiRaut998/30_Days_of_JavaScript_Leetcode.git
 
 Navigate to the folder and run any solution file:
 ```
-node 2620.js
+node 2620_counter.js  
 ```
 
 ---
