@@ -1,0 +1,25 @@
+#heading{
+    color:darkblue;
+    background-color: yellow;
+    width: fit-content;
+}
+#heading2{
+    color:darkcyan;
+    background-color:lightpink;
+    width: fit-content;
+}
+body{
+    background-color: azure;
+}
+p{
+    width: 50%;
+    font-size: large;
+    background-color:lavender
+}
+button{
+    background-color: blueviolet;
+    color: aliceblue;
+}
+.c1{
+    font-family:monospace;
+}
