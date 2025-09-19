@@ -142,6 +142,110 @@ for (let div of divs) {
 ✔ .firstChild / .lastChild → first/last node (may be text/comment)
 */
 
+/*======================================================================================
+ 🔹 ATTRIBUTES
+======================================================================================*/
+
+// 1. getAttribute(attr) → Gets attribute value
+let div = document.querySelector("div");
+div.getAttribute("id");    // "product"
+div.getAttribute("name");  // "JSName"
+
+// 2. setAttribute(attr, value) → Sets/updates attribute
+let para = document.querySelector("p");
+para.setAttribute("class", "newClass"); // replaces class
+
+/*
+⚠️ Note:
+- getAttribute works with HTML attributes.
+- setAttribute overrides existing values (dangerous for "class").
+- Use classList for safe class handling (preferred).
+*/
+
+/*======================================================================================
+ 🔹 STYLING
+======================================================================================*/
+
+// 1. Inline styling via .style
+let box = document.querySelector("#box");
+box.style.backgroundColor = "violet"; // Direct inline style
+
+// 2. className → Replace all classes
+box.className = "container highlighted"; // overwrites all
+
+// 3. classList → Add/remove/toggle safely
+box.classList.add("active");
+box.classList.remove("hidden");
+box.classList.toggle("collapsed");
+
+/*
+👉 Rule of thumb:
+- Use .style for unique/computed inline values.
+- Use .classList for scalable, state-driven styles.
+- Use .className only when replacing ALL classes.
+*/
+
+/*======================================================================================
+ 🔹 INSERT ELEMENTS
+======================================================================================*/
+
+// Create element
+let btn = document.createElement("button");
+btn.innerText = "Click Me!";
+
+// Insert methods
+box.append(btn);     // Inside, at end
+box.prepend(btn);    // Inside, at start
+box.before(btn);     // Outside, before node
+box.after(btn);      // Outside, after node
+
+// Example: Adding heading at start of body
+let h1 = document.createElement("h1");
+h1.innerHTML = "<i>Hi, I am new!</i>";
+document.body.prepend(h1);
+
+/*
+📌 Related:
+- appendChild(el) – similar to append(), older API.
+- removeChild(el) – removes child via parent.
+*/
+
+/*======================================================================================
+ 🔹 DELETE ELEMENTS
+======================================================================================*/
+
+// node.remove() → Deletes element
+// btn.remove();
+
+/*======================================================================================
+ 🔹 PRACTICE EXAMPLES
+======================================================================================*/
+
+// Task 1: Add button at top of body
+let btn2 = document.createElement("button");
+btn2.innerText = "Click Me!";
+btn2.style.backgroundColor = "red";
+btn2.style.color = "white";
+document.body.prepend(btn2);
+
+// Task 2: Add styled <p> with class
+let newPara = document.createElement("p");
+newPara.innerText = "Long sample text…";
+newPara.style.backgroundColor = "lightgreen";
+newPara.style.fontFamily = "Arial";
+newPara.style.color = "white";
+
+box.after(newPara);
+
+// Best way: Add class (without overwriting)
+newPara.classList.add("paraClass");
+// Remove class if needed
+// newPara.classList.remove("paraClass");
+
+/*
+⚠️ Inline styles > CSS styles (except with !important in CSS).
+*/
+
 /***************************************************************************************************
  ✅ End of Notes
 ***************************************************************************************************/
