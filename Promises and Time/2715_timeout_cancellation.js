@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2715. Timeout Cancellation
+// 30 days of JavaScript : 2715. Timeout Cancellation
 /** Given a function fn, an array of arguments args, and a timeout t in milliseconds, 
  * return a cancel function cancelFn.
 

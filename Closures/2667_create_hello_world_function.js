@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2667. Create Hello World Function
+// 30 days of JavaScript : 2667. Create Hello World Function
 // Write a function createHelloWorld. It should return a new function that always returns "Hello World".
 /**
  * @return {Function}

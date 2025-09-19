@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2703. Return Length of Arguments Passed
+// 30 days of JavaScript : 2703. Return Length of Arguments Passed
 // https://leetcode.com/problems/arguments-length
 // Write a function argsLength that accepts any number of arguments and returns the length of the arguments passed to it.
 

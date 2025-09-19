@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2623. Memoize
+// 30 days of JavaScript : 2623. Memoize
 // https://leetcode.com/problems/memoize
 
 /* Given a function fn, return a memoized version of that function.

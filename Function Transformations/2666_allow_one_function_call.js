@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2666. Allow One Function Call
+// 30 days of JavaScript : 2666. Allow One Function Call
 // https://leetcode.com/problems/once
 // Write a function once that accepts a callback function fn and returns a new function that can be invoked only once.
 // Subsequent calls to the new function should have no effect and return undefined.

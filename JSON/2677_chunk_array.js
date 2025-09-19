@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2677. Chunk Array
+// 30 days of JavaScript : 2677. Chunk Array
 
 /**
 Given an array arr and a chunk size size, return a chunked array.

@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2620. Counter
+// 30 days of JavaScript : 2620. Counter
 // Write a function createCounter. It should accept an initial integer n and return a function that when called, increments n by 1 and returns it.
 /**
  * @param {number} n

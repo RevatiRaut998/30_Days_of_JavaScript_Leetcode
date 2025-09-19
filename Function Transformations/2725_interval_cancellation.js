@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2725. Interval Cancellation
+// 30 days of JavaScript : 2725. Interval Cancellation
 /**
 Given a function fn, an array of arguments args, and an interval time t, return a cancel function cancelFn.
 After a delay of cancelTimeMs, the returned cancel function cancelFn will be invoked.

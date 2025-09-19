@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2704.  To Be Or Not To Be
+// 30 days of JavaScript : 2704.  To Be Or Not To Be
 // Implement Custom Function with Custom Error Message
 // https://leetcode.com/problems/expect
 // Write a function expect that accepts an argument val and returns an object with two functions toBe and notToBe.

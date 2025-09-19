@@ -1,4 +1,4 @@
-// // 30 days of Javacsript : 2635. Apply Transform Over Each Element in Array (Cue: MAP Function)
+// // 30 days of JavaScript : 2635. Apply Transform Over Each Element in Array (Cue: MAP Function)
 
 // Given an array arr and a function fn, return a new array with fn applied to each element of arr.
 // Please solve it without the built-in Array.map method.

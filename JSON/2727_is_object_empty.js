@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2727. Is Object Empty
+// 30 days of JavaScript : 2727. Is Object Empty
 /** 
 Given an object or an array, return if it is empty.
 

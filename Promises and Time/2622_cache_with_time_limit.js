@@ -1,4 +1,4 @@
-// 30 days of Javacsript : 2622. Cache With Time Limit
+// 30 days of JavaScript : 2622. Cache With Time Limit
 
 /*
 Write a class that allows getting and setting key-value pairs, however a time until 
