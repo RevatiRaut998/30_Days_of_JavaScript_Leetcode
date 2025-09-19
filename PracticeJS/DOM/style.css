@@ -23,3 +23,20 @@ button{
 .c1{
     font-family:monospace;
 }
+
+#box{
+    height: 250px;
+    width:100px;
+    background-color: chartreuse;
+    color:black;
+    font-weight:700;
+    font-size: medium;
+    font-family:monospace;
+    border: 1px solid black;
+}
+
+.paraClass {
+    background-color: lightskyblue !important;
+    font-family: monospace !important;
+    color: white !important;
+}

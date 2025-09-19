@@ -228,3 +228,237 @@ divs[2].innerText = "new Unique value 3";
     idx++;
 }
 */
+
+/*#####################################################################################################################################*/
+
+//ATTRIBUTES
+
+/*#####################################################################################################################################*/
+
+//1. getAtrribute(attr)
+//to get the attribute value
+//I can call this to get attributes of any node
+
+//Example:
+let div = document.querySelector("div");
+console.log(div);
+/*//Output: 
+    <div id="product">
+        <h2>Catalogue</h2>
+        <ul>
+            <li>Tops</li>
+            <li>Bottoms</li>
+            <li>Skirts</li>
+            <li>Shoes</li>
+        </ul>
+    </div>
+
+    or div#product 
+
+Note- Chrome DevTools shows DOM elements differently based on context: sometimes as a full HTML-like preview, 
+      other times as a shorthand like div#id.
+Both point to the same element object — the difference is only in how the console chooses to display it.
+*/
+
+let id = div.getAttribute("id");
+console.log(id); //Output : product
+
+let name1 = div.getAttribute("name");
+console.log(name1); //Output : JSName
+
+let paraData = document.querySelector("p");
+console.log(paraData.getAttribute("class")); // Output : c1
+
+/***************************************************************************************/
+
+//2. setAttribute(attr,value)
+//to set the attribute value
+
+console.log(paraData.setAttribute("class", "newClass"));
+//To test : In console : document.querySelector('p')
+//You'll see the output as -
+/* <p class="newClass">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+*/
+//Or you can go to Elements tab directly to see changed html
+
+//In console, you can directly add:
+paraData.setAttribute("class", "123");
+
+//To test : In console itself : document.querySelector('p')
+//You'll see the output as -
+/*
+    <p class="12345">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+*/
+
+//Or you can go to Elements tab directly to see changed html
+
+/***************************************************************************************************************************************/
+
+//STYLE
+
+//node.style
+
+let div2 = document.querySelector("#box");
+console.log(div2.style);
+//Output: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}
+
+//You can also change the styling
+div2.style.backgroundColor = "violet";
+
+//Background color of box is violet now
+
+/**
+ 🔹 JS Styling Approaches
+
+1. .style (inline styles)
+Directly changes the element’s CSS via JS.
+Good for one-off, dynamic values (e.g., div.style.height = window.innerHeight + "px";).
+Harder to maintain for larger apps.
+
+2. .classList / changing className
+
+Switches CSS classes already defined in stylesheets.
+Best for state-based UI changes (e.g., div.classList.add("completed")).
+Cleaner separation: CSS handles styling, JS handles logic.
+Easier to scale, maintain, and keep consistent.
+
+👉 Rule of thumb:
+Use .style for unique, computed values.
+Use .classList for reusable, state-driven styles.
+ 
+
+/**
+ 🔹 JS Styling Approaches
+
+1. element.style (inline styles)
+   - Directly changes CSS from JS.
+   - Good for one-off, dynamic values (e.g., div.style.height = window.innerHeight + "px";).
+   - Harder to maintain for larger apps.
+
+2. element.className
+   - Sets/replaces the entire class string.
+   - Useful when you want to reset all classes at once.
+   - Risk: overwrites existing classes.
+
+3. element.classList
+   - Provides methods: add(), remove(), toggle(), contains().
+   - Safely manages individual classes without affecting others.
+   - Best for state-based UI changes (completed, error, active).
+   - Scalable and maintainable (logic in JS, styles in CSS).
+
+Here, .classList / changing className
+
+- Switches CSS classes already defined in stylesheets.
+- Best for state-based UI changes (e.g., div.classList.add("completed")).
+- Cleaner separation: CSS handles styling, JS handles logic.
+- Easier to scale, maintain, and keep consistent.
+
+
+👉 Rule of thumb:
+- Use .style for unique inline values.
+- Use .classList for reusable, state-driven styles.
+- Use .className when you want to replace all classes at once.
+ */
+
+/*################################################################################################################################*/
+
+//Insert Elements
+
+let el = document.createElement("div");
+
+//Example:
+let newBn = document.createElement("button");
+newBn.innerText = "Click Me!";
+console.log(newBn); // It will not be visible in UI only console
+//We have to add this element to our Document (Tree-like model) now
+
+//Use below methods to add new elements to DOM
+
+/***************************************************************************************************************************************/
+//node.append(el)
+// adds at the end of node ( inside)
+
+div2.append(newBn);
+
+/***************************************************************************************************************************************/
+//node.prepend(el)
+// adds at the start of node ( inside)
+
+div2.prepend(newBn);
+
+/***************************************************************************************************************************************/
+//node.before(el)
+// adds before the node ( outside)
+
+div2.before(newBn);
+
+/***************************************************************************************************************************************/
+//node.after(el)
+// adds after the node ( outside)
+
+div2.after(newBn);
+
+//Example 2:
+
+let newHeading1 = document.createElement("h1");
+newHeading1.innerHTML = "<i>HI, I am new!</i>";
+
+document.querySelector("body").prepend(newHeading1);
+
+//NOTE : Read about appendChild() and removeChild()
+/***************************************************************************************************************************************/
+
+//DELETE Elements
+//node.remove()
+//deletes the node
+//Example:
+// newBn.remove();
+
+/***************************************************************************************************************************************/
+
+//Practice Examples:
+//Task: Add a new button in js and place it at start of body tag
+let Btn2 = document.createElement("button");
+Btn2.innerText = "Click Me!";
+Btn2.style.backgroundColor = "red";
+Btn2.style.color = "white";
+document.querySelector("body").prepend(Btn2);
+
+//Task : Add a new p tag in js , some styling , then assign a css class to it in js itself
+let newPara = document.createElement("p");
+newPara.innerText =
+  "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?";
+newPara.style.backgroundColor = "lightgreen";
+newPara.style.fontFamily = "arial";
+newPara.style.fontSize = "medium";
+newPara.style.color = "white";
+
+div2.after(newPara);
+
+//Adding new class to para element, here our class is present in css only
+//newPara.className = "paraClass";
+//Best way :
+newPara.classList.add("paraClass");
+
+//Incase newPara or an existing html p tag has a class already , setAtrribute would override the existing class  ,
+// that is why using Classlist is the best way to append new class to the para
+//use newPara.classList.remove("paraClass");     to remove the class
+
+//NOTE : Here, styling in js (inline styling) for para will take precedent over the css styling
+// only if you add !important in css will it override inline styling

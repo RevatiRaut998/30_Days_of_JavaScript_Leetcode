@@ -296,3 +296,168 @@ console.log vs console.dir:
 6. Use innerHTML carefully to avoid XSS attacks with user input
 7. Use loops for batch operations on multiple elements
 */
+
+/*#####################################################################################################################################*/
+// ATTRIBUTES
+/*#####################################################################################################################################*/
+
+// 1. getAttribute(attr)
+// To get the attribute value of any node
+
+// Example:
+let div = document.querySelector("div");
+console.log(div);
+/*
+// Output: 
+<div id="product">
+    <h2>Catalogue</h2>
+    <ul>
+        <li>Tops</li>
+        <li>Bottoms</li>
+        <li>Skirts</li>
+        <li>Shoes</li>
+    </ul>
+</div>
+
+// Note: Chrome DevTools shows DOM elements differently based on context.
+// div#product and full HTML preview both point to the same element object.
+*/
+
+let id = div.getAttribute("id");
+console.log(id); // Output : product
+
+let name1 = div.getAttribute("name");
+console.log(name1); // Output : JSName
+
+let paraData = document.querySelector("p");
+console.log(paraData.getAttribute("class")); // Output : c1
+
+/*#####################################################################################################################################*/
+
+// 2. setAttribute(attr, value)
+// To set the attribute value
+
+console.log(paraData.setAttribute("class", "newClass"));
+/*
+// To test: document.querySelector('p')
+// Output:
+<p class="newClass">Lorem ipsum...</p>
+*/
+
+// Directly setting attribute in console:
+paraData.setAttribute("class", "123");
+/*
+// Output:
+<p class="12345">Lorem ipsum...</p>
+*/
+
+/*#####################################################################################################################################*/
+// STYLE
+/*#####################################################################################################################################*/
+
+let div2 = document.querySelector("#box");
+console.log(div2.style); // Output: CSSStyleDeclaration
+
+// Changing styling via JS
+div2.style.backgroundColor = "violet";
+
+/*
+🔹 JS Styling Approaches:
+
+1. element.style
+   - Inline styles via JS
+   - Good for one-off dynamic values
+   - Harder to maintain for large apps
+
+2. element.className
+   - Sets/replaces all classes at once
+   - Risk: overwrites existing classes
+
+3. element.classList
+   - Methods: add(), remove(), toggle(), contains()
+   - Best for state-based UI changes
+   - Safe and maintainable
+
+Rule of thumb:
+- Use .style for unique, computed values
+- Use .classList for reusable, state-driven styles
+- Use .className to replace all classes at once
+*/
+
+/*#####################################################################################################################################*/
+// INSERT ELEMENTS
+/*#####################################################################################################################################*/
+
+let el = document.createElement("div");
+
+// Example: create a button
+let newBn = document.createElement("button");
+newBn.innerText = "Click Me!";
+console.log(newBn); // Only in console, not UI
+
+// Methods to insert element in DOM:
+
+// node.append(el) → adds at end inside
+div2.append(newBn);
+
+// node.prepend(el) → adds at start inside
+div2.prepend(newBn);
+
+// node.before(el) → adds before node (outside)
+div2.before(newBn);
+
+// node.after(el) → adds after node (outside)
+div2.after(newBn);
+
+// Example 2: create and prepend heading
+let newHeading1 = document.createElement("h1");
+newHeading1.innerHTML = "<i>HI, I am new!</i>";
+document.querySelector("body").prepend(newHeading1);
+
+// Note: Also read about appendChild() and removeChild()
+
+/*#####################################################################################################################################*/
+// DELETE ELEMENTS
+/*#####################################################################################################################################*/
+
+// node.remove() → deletes the node
+// Example:
+// newBn.remove();
+
+/*#####################################################################################################################################*/
+// PRACTICE EXAMPLES
+/*#####################################################################################################################################*/
+
+// Task: Add a new button and place it at start of body
+let Btn2 = document.createElement("button");
+Btn2.innerText = "Click Me!";
+Btn2.style.backgroundColor = "red";
+Btn2.style.color = "white";
+document.querySelector("body").prepend(Btn2);
+
+// Task: Add a new paragraph, style it, assign CSS class
+let newPara = document.createElement("p");
+newPara.innerText = `
+But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain 
+was born and I will give you a complete account of the system, and expound the actual teachings 
+of the great explorer of the truth, the master-builder of human happiness...
+`;
+
+newPara.style.backgroundColor = "lightgreen";
+newPara.style.fontFamily = "arial";
+newPara.style.fontSize = "medium";
+newPara.style.color = "white";
+
+// Add class from CSS
+newPara.classList.add("paraClass");
+
+// Insert paragraph after div2
+div2.after(newPara);
+
+/*
+Note:
+- Using classList.add() is better than setAttribute() because it preserves existing classes.
+- Use newPara.classList.remove("paraClass") to remove a class.
+- Inline styling takes precedence over CSS unless CSS uses !important.
+*/
+
