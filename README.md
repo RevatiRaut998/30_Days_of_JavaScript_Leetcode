@@ -57,7 +57,7 @@ Closures/
 20. Is Object Empty ✅
 21. Chunk Array ✅
 22. Array Prototype Last ✅
-23. Group By – *Medium*  
+23. Group By – *Medium* ✅
 24. Sort By  
 25. Join Two Arrays by ID – *Medium*  
 26. Flatten Deeply Nested Array – *Medium*  
