@@ -1,0 +1,37 @@
+div{
+    height: 100px;
+    width:100px;
+    background-color: dodgerblue;
+    color: aliceblue;
+    border:2px solid black ;
+}
+
+.darkMode {
+    background-color: black;
+    color: blueviolet;
+}
+
+.lightMode{
+    background-color: white;
+    color: chartreuse;
+}
+
+.hidden{
+    visibility:hidden;
+    display: none;
+}
+
+#hover{
+   height: 300px;
+    width:300px; 
+    background-color:lightgoldenrodyellow;
+    color: blueviolet;
+    font-size:x-large;
+    font-family:monospace;
+    text-align: center;
+    font-weight: 700;
+}
+
+.visible{
+    visibility: visible;
+}
