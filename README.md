@@ -59,7 +59,7 @@ Closures/
 22. Array Prototype Last ✅
 23. Group By – *Medium* ✅
 24. Sort By ✅  
-25. Join Two Arrays by ID – *Medium*  
+25. Join Two Arrays by ID – *Medium* ✅
 26. Flatten Deeply Nested Array – *Medium*  
 27. Compact Object – *Medium*  
 
