@@ -65,7 +65,7 @@ Closures/
 
 ### 🏛️ **Classes**
 28. Event Emitter – *Medium*  
-29. Array Wrapper  
+29. Array Wrapper ✅
 30. Calculator with Method Chaining  
 
 ### 💻 **Practice JS**
